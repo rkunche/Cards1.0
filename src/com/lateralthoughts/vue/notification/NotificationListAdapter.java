@@ -14,8 +14,7 @@ import android.widget.LinearLayout;
 import android.widget.LinearLayout.LayoutParams;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-
-import com.example.googlenowcard.R;
+import com.card.ui.R;
 
 public class NotificationListAdapter extends BaseAdapter {
     ArrayList<NotificationAisle> mNotificationList;

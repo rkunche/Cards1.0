@@ -2,7 +2,7 @@ package com.fourmob.panningview;
 
  
 
-import com.example.googlenowcard.R;
+import com.card.ui.R;
 
 import android.content.Context;
 import android.content.res.TypedArray;

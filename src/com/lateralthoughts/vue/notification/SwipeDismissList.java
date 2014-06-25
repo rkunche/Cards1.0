@@ -41,8 +41,7 @@ import android.widget.Button;
 import android.widget.ListView;
 import android.widget.PopupWindow;
 import android.widget.TextView;
-
-import com.example.googlenowcard.R;
+import com.card.ui.R;
 import com.haarman.listviewanimations.itemmanipulation.SwipeDismissListViewTouchListener;
 import com.nineoldandroids.animation.Animator;
 import com.nineoldandroids.animation.AnimatorListenerAdapter;

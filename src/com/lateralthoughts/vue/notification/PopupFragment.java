@@ -33,7 +33,7 @@ import android.widget.RelativeLayout.LayoutParams;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.googlenowcard.R;
+import com.card.ui.R;
 import com.lateralthoughts.vue.notification.SwipeDismissList.Undoable;
 
 public class PopupFragment extends Fragment {

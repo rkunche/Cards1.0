@@ -27,7 +27,7 @@ import android.util.Log;
 import android.widget.ImageView;
 
 import com.card.utils.Utils;
-import com.example.googlenowcard.R;
+import com.card.ui.R;
 
 public class ImageLoader {
     static ImageLoader imageLoader;
