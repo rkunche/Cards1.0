@@ -18,19 +18,19 @@ import android.widget.TextView;
 import com.example.googlenowcard.R;
 
 public class NotificationListAdapter extends BaseAdapter {
-    ArrayList<NotificationAisle> notificationList;
-    Context context;
+    ArrayList<NotificationAisle> mNotificationList;
+    Context mContext;
     
     public NotificationListAdapter(Context context,
             ArrayList<NotificationAisle> notificationList) {
-        this.context = context;
-        this.notificationList = notificationList;
+        this.mContext = context;
+        this.mNotificationList = notificationList;
     }
     
     @Override
     public int getCount() {
         try {
-            return notificationList.size();
+            return mNotificationList.size();
         } catch (Exception e) {
             e.printStackTrace();
             return 0;
@@ -49,13 +49,13 @@ public class NotificationListAdapter extends BaseAdapter {
     
     public NotificationAisle removeItem(int position) {
         NotificationAisle notificatinAisle = null;
-        if (notificationList != null && notificationList.size() > 0) {
-            notificatinAisle = notificationList.remove(position);
+        if (mNotificationList != null && mNotificationList.size() > 0) {
+            notificatinAisle = mNotificationList.remove(position);
         }
         Log.i("notificationLIstSize", "notificationLIstSize: "
-                + notificationList.size());
+                + mNotificationList.size());
         
-        if (notificationList.size() == 0) {
+        if (mNotificationList.size() == 0) {
             addTempItem();
         }
         notifyDataSetChanged();
@@ -67,7 +67,7 @@ public class NotificationListAdapter extends BaseAdapter {
         
         final ViewHolder holder;
         if (convertView == null) {
-            LayoutInflater inflater = (LayoutInflater) context
+            LayoutInflater inflater = (LayoutInflater) mContext
                     .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             convertView = inflater.inflate(
                     R.layout.notification_popup_window_row, null);
@@ -96,10 +96,10 @@ public class NotificationListAdapter extends BaseAdapter {
         } else {
             holder = (ViewHolder) convertView.getTag();
         }
-        if (notificationList.size() == 1
-                && notificationList.get(position).ismEmptyNotification() == true) {
-            holder.notificationAisleTitle.setText(notificationList
-                    .get(position).getAisleTitle());
+        if (mNotificationList.size() == 1
+                && mNotificationList.get(position).ismEmptyNotification() == true) {
+            holder.notificationAisleTitle.setText(mNotificationList.get(
+                    position).getAisleTitle());
             holder.bookmarks.setVisibility(View.GONE);
             holder.likes.setVisibility(View.GONE);
             holder.bookmarkId.setVisibility(View.GONE);
@@ -115,7 +115,7 @@ public class NotificationListAdapter extends BaseAdapter {
             holder.notificationAisleTitle.setLayoutParams(params);
             ((ImageView) holder.userImage).setVisibility(View.GONE);
         } else {
-            if (notificationList.get(position).getNotificationText()
+            if (mNotificationList.get(position).getNotificationText()
                     .equals("Your aisle is uploading")) {
                 holder.bookmarks.setVisibility(View.GONE);
                 holder.likes.setVisibility(View.GONE);
@@ -132,17 +132,17 @@ public class NotificationListAdapter extends BaseAdapter {
                 holder.bottom_lay_id.setVisibility(View.VISIBLE);
             }
             ((ImageView) holder.userImage).setImageResource(R.drawable.index);
-            holder.bookmarks.setText(notificationList.get(position)
+            holder.bookmarks.setText(mNotificationList.get(position)
                     .getBookmarkCount() + "");
-            holder.likes.setText(notificationList.get(position).getLikeCount()
+            holder.likes.setText(mNotificationList.get(position).getLikeCount()
                     + "");
-            holder.comments.setText(notificationList.get(position)
+            holder.comments.setText(mNotificationList.get(position)
                     .getCommentsCount() + "");
-            holder.notificationDescription.setText(notificationList.get(
+            holder.notificationDescription.setText(mNotificationList.get(
                     position).getNotificationText());
-            holder.notificationAisleTitle.setText(notificationList
-                    .get(position).getAisleTitle());
-            if (notificationList.get(position).isReadStatus()) { // read
+            holder.notificationAisleTitle.setText(mNotificationList.get(
+                    position).getAisleTitle());
+            if (mNotificationList.get(position).isReadStatus()) { // read
                 holder.overflow_listlayout_layout.setBackgroundColor(Color
                         .parseColor("#C0C0C0"));
             } else { // unread
@@ -154,8 +154,8 @@ public class NotificationListAdapter extends BaseAdapter {
     }
     
     public int getSerialNumber(int position) {
-        if (notificationList != null && notificationList.size() > 0) {
-            return notificationList.get(position).getId();
+        if (mNotificationList != null && mNotificationList.size() > 0) {
+            return mNotificationList.get(position).getId();
         }
         return -1;
     }
@@ -173,7 +173,7 @@ public class NotificationListAdapter extends BaseAdapter {
     }
     
     private void addTempItem() {
-        notificationList.clear();
+        mNotificationList.clear();
         NotificationAisle notificationAisle = new NotificationAisle();
         
         notificationAisle
@@ -181,6 +181,6 @@ public class NotificationListAdapter extends BaseAdapter {
         notificationAisle.setReadStatus(false);
         notificationAisle.setAisleId("");
         notificationAisle.setmEmptyNotification(true);
-        notificationList.add(notificationAisle);
+        mNotificationList.add(notificationAisle);
     }
 }

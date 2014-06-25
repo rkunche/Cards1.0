@@ -2,9 +2,9 @@ package com.lateralthoughts.vue.notification;
 
 import java.util.ArrayList;
 
-import com.googlenowcard.utils.Utils;
+import com.card.utils.Utils;
 
-public class NotificationManager implements NotificationInterface{
+public class NotificationManager implements NotificationInterface {
     private ArrayList<NotificationAisle> mNotificationList = new ArrayList<NotificationAisle>();
     
     public NotificationManager() {
@@ -12,7 +12,7 @@ public class NotificationManager implements NotificationInterface{
     }
     
     public ArrayList<NotificationAisle> getUserNotifications() {
-        //TODO: get the notifications from the db.
+        // TODO: get the notifications from the db.
         for (int i = 0; i < 10; i++) {
             NotificationAisle notificationAisle = new NotificationAisle();
             notificationAisle.setNotificationText("Notification Text");
@@ -28,13 +28,13 @@ public class NotificationManager implements NotificationInterface{
         }
         return mNotificationList;
     }
-
+    
     @Override
     public boolean removeNotification(long notificationId) {
         // TODO Auto-generated method stub
         return false;
     }
-
+    
     @Override
     public void aggrigateNotifications(
             ArrayList<NotificationAisle> notificationAisles) {

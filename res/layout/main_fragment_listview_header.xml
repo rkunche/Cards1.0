@@ -31,7 +31,7 @@
             android:layout_marginTop="16dp"
             android:text="Welcome to a whole new shopping experience," />
  
-            <com.example.googlenowcard.CustomAutoCompleteTextView
+            <com.card.ui.CustomAutoCompleteTextView
         android:id="@+id/user_name_id"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -52,7 +52,7 @@
             android:layout_marginTop="16dp"
             android:text="from" />
 
-        <com.example.googlenowcard.CustomAutoCompleteTextView
+        <com.card.ui.CustomAutoCompleteTextView
             android:id="@+id/user_city_id"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

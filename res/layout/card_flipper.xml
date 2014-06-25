@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/card_top_id" >
 
-        <com.example.googlenowcard.AisleContentBrowser
+        <com.card.ui.AisleContentBrowser
             android:id="@+id/pager"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -21,7 +21,7 @@
 
             <include layout="@layout/pager_card_one" />
             <!-- <include layout="@layout/pager_card_two" /> -->
-        </com.example.googlenowcard.AisleContentBrowser>
+        </com.card.ui.AisleContentBrowser>
 
         <ImageView
             android:id="@+id/pager_overflow_id"

@@ -3,15 +3,15 @@ package com.aisles.datamodels;
 import java.util.ArrayList;
 
 public class Aisle {
-  public  String suggesterName;
-  public String findAtPrice;
-  public String aisleDescription;
-  public String aisleTitle;
-  public String aisleOwnerFirstName;
-  public String aisleOwnerLastName;
-  public  String aisleOwnerProfilePicUrl;
-  public ArrayList<ImageDetails> aisleImageList = new ArrayList<ImageDetails>();
-  public int aisleId;
-  public int cardHeight;
-  public int cardFinalHeight;
+    public String mSuggesterName;
+    public String mFindAtPrice;
+    public String mAisleDescription;
+    public String mAisleTitle;
+    public String mAisleOwnerFirstName;
+    public String mAisleOwnerLastName;
+    public String mAisleOwnerProfilePicUrl;
+    public ArrayList<ImageDetails> mAisleImageList = new ArrayList<ImageDetails>();
+    public int mAisleId;
+    public int mCardHeight;
+    public int mCardFinalHeight;
 }

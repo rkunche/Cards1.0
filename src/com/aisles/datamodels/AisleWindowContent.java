@@ -13,8 +13,8 @@ package com.aisles.datamodels;
 import java.util.ArrayList;
 import java.util.Random;
 
-import com.example.googlenowcard.MainActivity;
-import com.googlenowcard.utils.Utils;
+import com.card.ui.MainActivity;
+import com.card.utils.Utils;
 
 public class AisleWindowContent {
     public static final String EMPTY_AISLE_CONTENT_ID = "EmptyAisleWindow";
@@ -31,9 +31,6 @@ public class AisleWindowContent {
     public int mTotalLikesCount;
     public String mAisleCureentStage = VueConstants.AISLE_STATGE_ONE;
     private boolean mShareIndicator = false;
-    
-    
-    
     
     public int mTagId;
     
@@ -53,7 +50,7 @@ public class AisleWindowContent {
         if (createPlaceHolders) {
             mContext = new AisleContext();
             mAisleImagesList = new ArrayList<AisleImageDetails>();
-        } 
+        }
     }
     
     public AisleWindowContent(AisleContext context,
@@ -62,7 +59,7 @@ public class AisleWindowContent {
     
     public void setAisleId(String aisleId) {
         mAisleId = aisleId;
-    } 
+    }
     
     @SuppressWarnings("unchecked")
     public void addAisleContent(AisleContext context,
@@ -78,8 +75,7 @@ public class AisleWindowContent {
         }
         mAisleId = context.mAisleId;
         mContext = context;
-       
-    
+        
         if (mAisleImagesList != null) {
             udpateImageUrlsForDevice();
         }
@@ -132,7 +128,7 @@ public class AisleWindowContent {
         } else {
             imageDetails.mCustomImageUrl = regularUrl;
         }
- 
+        
     }
     
     public AisleContext getAisleContext() {
@@ -164,20 +160,20 @@ public class AisleWindowContent {
         mWindowLargestHeight = largestHeight;
     }
     
- private void findBestHeight(){
-     int bestHeight = 0;
-     for(int i=0;i<mAisleImagesList.size();i++){
-         if(bestHeight < mAisleImagesList.get(i).mAvailableHeight){
-             bestHeight = mAisleImagesList.get(i).mAvailableHeight;
-         }
-     }
-     mWindowLargestHeight =  Utils.getCurrentCardHeight(bestHeight,MainActivity.mCurrentInstance);
- }
-    
- 
- 
-    
- 
+    /**
+     * finds the best height among all the images, here best height will be the
+     * card height.
+     */
+    private void findBestHeight() {
+        int bestHeight = 0;
+        for (int i = 0; i < mAisleImagesList.size(); i++) {
+            if (bestHeight < mAisleImagesList.get(i).mAvailableHeight) {
+                bestHeight = mAisleImagesList.get(i).mAvailableHeight;
+            }
+        }
+        mWindowLargestHeight = Utils.getCurrentCardHeight(bestHeight,
+                MainActivity.mCurrentInstance);
+    }
     
     private int getRandomNumber() {
         

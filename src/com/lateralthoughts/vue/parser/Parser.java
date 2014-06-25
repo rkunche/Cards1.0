@@ -77,7 +77,7 @@ public class Parser {
                 .getString(VueConstants.AISLE_IMAGE_STORE);
         aisleImageDetails.mImageUrl = jsonObject
                 .getString(VueConstants.AISLE_IMAGE_IMAGE_URL);
-        Log.i("ImageUrl", "ImageUrl: "+ aisleImageDetails.mImageUrl);
+        Log.i("ImageUrl", "ImageUrl: " + aisleImageDetails.mImageUrl);
         aisleImageDetails.mAvailableWidth = jsonObject
                 .getInt(VueConstants.AISLE_IMAGE_WIDTH);
         aisleImageDetails.mDetailsUrl = jsonObject
@@ -213,8 +213,6 @@ public class Parser {
         return imageList;
     }
     
- 
-    
     private ArrayList<AisleWindowContent> parseAisleInformation(
             JSONArray jsonArray, boolean isEmptyAilseCached)
             throws JSONException {
@@ -246,18 +244,17 @@ public class Parser {
             
             if (aisleImageDetailsList != null
                     && aisleImageDetailsList.size() > 0) {
-              
-                        AisleWindowContent aisleWindowContent = new AisleWindowContent(aisleContext.mAisleId);
-                        
-                        aisleWindowContent.addAisleContent(aisleContext,
+                
+                AisleWindowContent aisleWindowContent = new AisleWindowContent(
+                        aisleContext.mAisleId);
+                
+                aisleWindowContent.addAisleContent(aisleContext,
                         aisleImageDetailsList);
                 aisleWindowContentList.add(aisleWindowContent);
-            }  
+            }
         }
         return aisleWindowContentList;
     }
-    
- 
     
     public AisleContext parseAisleData(JSONObject josnObject) {
         AisleContext aisleContext = new AisleContext();
@@ -319,10 +316,6 @@ public class Parser {
         }
         return aisleContext;
     }
-    
- 
-    
-    
     
     public static ArrayList<ImageRating> parseRatedImages(String response) {
         ArrayList<ImageRating> imgRatingList = new ArrayList<ImageRating>();
@@ -394,8 +387,6 @@ public class Parser {
         }
         return finalList;
     }
-    
- 
     
     public ImageComment parseCommentResponse(String response) {
         try {

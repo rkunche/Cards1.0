@@ -1,6 +1,5 @@
 package com.aisles.datamodels;
 
-
 public class ImageRating {
     
     public static final int NEW_TIME_STAMP = 2;
@@ -91,12 +90,11 @@ public class ImageRating {
      * ImageRatingOwnerFirstName count is a read-only field for the client. So
      * getter should be disabled. This will disable serialization of the field.
      */
- 
+    
     public String getRatingOwnerFirstName() {
         return mImageRatingOwnerFirstName;
     }
     
-   
     public void setRatingOwnerFirstName(String imageRatingOwnerFirstName) {
         this.mImageRatingOwnerFirstName = imageRatingOwnerFirstName;
     }
@@ -109,7 +107,7 @@ public class ImageRating {
     public String getRatingOwnerLastName() {
         return mImageRatingOwnerLastName;
     }
- 
+    
     public void setRatingOwnerLastName(String imageRatingOwnerLastName) {
         this.mImageRatingOwnerLastName = imageRatingOwnerLastName;
     }

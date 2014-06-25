@@ -8,83 +8,83 @@ public class NotificationAisle {
     }
     
     public int getId() {
-        return id;
+        return mId;
     }
     
     public void setId(int id) {
-        this.id = id;
+        this.mId = id;
     }
     
-    private int id;
-    private String aisleId;
-    private String userName;
+    private int mId;
+    private String mAisleId;
+    private String mUserName;
     
     public String getUserName() {
-        return userName;
+        return mUserName;
     }
     
     public void setUserName(String userName) {
-        this.userName = userName;
+        this.mUserName = userName;
     }
     
     public String getImageId() {
-        return imageId;
+        return mImageId;
     }
     
     public void setImageId(String imageId) {
-        this.imageId = imageId;
+        this.mImageId = imageId;
     }
     
-    private String imageId;
+    private String mImageId;
     
     public String getNotificationText() {
-        return notificationText;
+        return mNotificationText;
     }
     
     public void setNotificationText(String notificationText) {
-        this.notificationText = notificationText;
+        this.mNotificationText = notificationText;
     }
     
-    private String notificationText;
+    private String mNotificationText;
     
     public String getUserProfileImageUrl() {
-        return userProfileImageUrl;
+        return mUserProfileImageUrl;
     }
     
     public void setUserProfileImageUrl(String userProfileImageUrl) {
-        this.userProfileImageUrl = userProfileImageUrl;
+        this.mUserProfileImageUrl = userProfileImageUrl;
     }
     
     public String getAisleTitle() {
-        return aisleTitle;
+        return mAisleTitle;
     }
     
     public void setAisleTitle(String aisleTitle) {
-        this.aisleTitle = aisleTitle;
+        this.mAisleTitle = aisleTitle;
     }
     
     public int getLikeCount() {
-        return likeCount;
+        return mLikeCount;
     }
     
     public void setLikeCount(int likeCount) {
-        this.likeCount = likeCount;
+        this.mLikeCount = likeCount;
     }
     
     public int getBookmarkCount() {
-        return bookmarkCount;
+        return mBookmarkCount;
     }
     
     public void setBookmarkCount(int bookmarkCount) {
-        this.bookmarkCount = bookmarkCount;
+        this.mBookmarkCount = bookmarkCount;
     }
     
     public int getCommentsCount() {
-        return commentsCount;
+        return mCommentsCount;
     }
     
     public void setCommentsCount(int commentsCount) {
-        this.commentsCount = commentsCount;
+        this.mCommentsCount = commentsCount;
     }
     
     public ArrayList<NotificationAisle> getAggregatedAisles() {
@@ -96,49 +96,49 @@ public class NotificationAisle {
         this.aggregatedAisles = aggregatedAisles;
     }
     
-    private String userProfileImageUrl;
-    private String aisleTitle; // aisle title is combination of lokkingfor and
+    private String mUserProfileImageUrl;
+    private String mAisleTitle; // aisle title is combination of lokkingfor and
                                // occasion
-    private int likeCount;
-    private int bookmarkCount;
-    private int commentsCount;
+    private int mLikeCount;
+    private int mBookmarkCount;
+    private int mCommentsCount;
     private ArrayList<NotificationAisle> aggregatedAisles;
     
     public String getAisleId() {
-        return aisleId;
+        return mAisleId;
     }
     
     public void setAisleId(String aisleId) {
-        this.aisleId = aisleId;
+        this.mAisleId = aisleId;
     }
     
     public boolean isReadStatus() {
-        return readStatus;
+        return mReadStatus;
     }
     
     public void setReadStatus(boolean readStatus) {
-        this.readStatus = readStatus;
+        this.mReadStatus = readStatus;
     }
     
-    private boolean readStatus; // true for read, false for unread
+    private boolean mReadStatus; // true for read, false for unread
     
     public NotificationAisle(int id, String aisleId, String imageId,
             String userName, String userProfileImageUrl, String aisleTitle,
             int likeCount, int bookmarkCount, int commentsCount,
             ArrayList<NotificationAisle> aggregatedAisles, boolean readStatus,
             String notificationText) {
-        this.aisleId = aisleId;
-        this.userProfileImageUrl = userProfileImageUrl;
-        this.aisleTitle = aisleTitle;
-        this.likeCount = likeCount;
-        this.bookmarkCount = bookmarkCount;
-        this.commentsCount = commentsCount;
+        this.mAisleId = aisleId;
+        this.mUserProfileImageUrl = userProfileImageUrl;
+        this.mAisleTitle = aisleTitle;
+        this.mLikeCount = likeCount;
+        this.mBookmarkCount = bookmarkCount;
+        this.mCommentsCount = commentsCount;
         this.aggregatedAisles = aggregatedAisles;
-        this.readStatus = readStatus;
-        this.notificationText = notificationText;
-        this.imageId = imageId;
-        this.id = id;
-        this.userName = userName;
+        this.mReadStatus = readStatus;
+        this.mNotificationText = notificationText;
+        this.mImageId = imageId;
+        this.mId = id;
+        this.mUserName = userName;
     }
     
     private boolean mEmptyNotification = false;

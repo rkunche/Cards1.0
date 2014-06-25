@@ -1,8 +1,8 @@
 package com.aisles.datamodels;
 
 public class ImageDetails {
-    String imageUrl;
-    String imageSuggesterImageUrl;
-    int imageHeight,imageWidth;
-    String findAtSource;
+    String mImageUrl;
+    String mImageSuggesterImageUrl;
+    int mImageHeight, mImageWidth;
+    String mFindAtSource;
 }
