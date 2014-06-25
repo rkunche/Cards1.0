@@ -1,0 +1,74 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <include
+        android:id="@+id/card_top_id"
+        layout="@layout/card_top" />
+
+    <RelativeLayout
+        android:id="@+id/pager_layout_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/card_top_id" >
+
+        <com.example.googlenowcard.AisleContentBrowser
+            android:id="@+id/pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusable="true" >
+
+            <include layout="@layout/pager_card_one" />
+            <!-- <include layout="@layout/pager_card_two" /> -->
+        </com.example.googlenowcard.AisleContentBrowser>
+
+        <ImageView
+            android:id="@+id/pager_overflow_id"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="24dp"
+            android:layout_marginTop="22dp"
+            android:background="@drawable/vue_button_selector"
+            android:src="@drawable/ic_action_overflow" />
+
+        <RelativeLayout
+            android:id="@+id/pager_next_layout_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="16dp" >
+
+            <ImageView
+                android:id="@+id/pager_next_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_action_forward" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/bottom_view_id"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/card_botoom_text_height"
+        android:layout_below="@+id/pager_layout_id"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="-12dp"
+        android:gravity="center_vertical"
+        android:text="starts in 2 days..." />
+
+    <TextView
+        android:id="@+id/bottom_view_id_ratenow"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/card_botoom_text_height"
+        android:layout_below="@+id/pager_layout_id"
+        android:layout_marginTop="-12dp"
+        android:layout_toRightOf="@+id/bottom_view_id"
+        android:background="@drawable/vue_button_selector"
+        android:gravity="center_vertical"
+        android:text="Please rate now!"
+        android:textColor="@android:color/holo_orange_light" />
+
+</RelativeLayout>

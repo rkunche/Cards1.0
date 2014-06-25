@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white" >
+   <RelativeLayout  android:layout_width="match_parent"
+         android:id="@+id/rank_lay_id"
+        android:layout_height="wrap_content">
+        
+    <com.fourmob.panningview.PanningView
+            android:id="@+id/panningView"
+            android:layout_width="match_parent"
+            android:layout_height="104dp"
+            android:src="@drawable/bg_default_artist_art2"
+             />
+    <LinearLayout
+      
+        android:layout_width="match_parent"
+        android:layout_height="104dp"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="96dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="4dp"
+            android:layout_weight="1"
+            android:background="@android:color/darker_gray" >
+
+            <ImageView
+                android:id="@+id/image_one_id"
+                android:layout_width="match_parent"
+                android:layout_height="96dp" />
+
+            <TextView
+                android:id="@+id/rank_one_id"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/round_corners"
+                android:gravity="center"
+                android:text="1"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/rank_one_small_id"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:background="@drawable/round_corners"
+                android:gravity="center"
+                android:text="1"
+                android:textColor="@android:color/black" />
+
+            <RelativeLayout
+                android:id="@+id/cancle_one_lay_id"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_alignParentRight="true" >
+
+                <TextView
+                    android:id="@+id/cancle_one_id"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_alignParentRight="true"
+                    android:background="#dd4b39"
+                    android:gravity="center"
+                    android:text="x"
+                    android:textColor="@android:color/white" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="96dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="4dp"
+            android:layout_weight="1"
+            android:background="@android:color/darker_gray" >
+
+            <ImageView
+                android:id="@+id/image_two_id"
+                android:layout_width="match_parent"
+                android:layout_height="96dp" />
+
+            <TextView
+                android:id="@+id/rank_two_id"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/round_corners"
+                android:gravity="center"
+                android:text="2"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/rank_two_small_id"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:background="@drawable/round_corners"
+                android:gravity="center"
+                android:text="2"
+                android:textColor="@android:color/black" />
+
+            <RelativeLayout
+                android:id="@+id/cancle_two_lay_id"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_alignParentRight="true" >
+
+                <TextView
+                    android:id="@+id/cancle_two_id"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_alignParentRight="true"
+                    android:background="#dd4b39"
+                    android:gravity="center"
+                    android:text="x"
+                    android:textColor="@android:color/white" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="96dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:layout_weight="1"
+            android:background="@android:color/darker_gray" >
+
+            <ImageView
+                android:id="@+id/image_three_id"
+                android:layout_width="match_parent"
+                android:layout_height="96dp" />
+
+            <TextView
+                android:id="@+id/rank_three_id"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/round_corners"
+                android:gravity="center"
+                android:text="3"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/rank_three_small_id"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:background="@drawable/round_corners"
+                android:gravity="center"
+                android:text="3"
+                android:textColor="@android:color/black" />
+
+            <RelativeLayout
+                android:id="@+id/cancle_three_lay_id"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_alignParentRight="true" >
+
+                <TextView
+                    android:id="@+id/cancle_three_id"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_alignParentRight="true"
+                    android:background="#dd4b39"
+                    android:gravity="center"
+                    android:text="x"
+                    android:textColor="@android:color/white" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>
+    <GridView
+        android:id="@+id/gridview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rank_lay_id"
+        android:gravity="center"
+        android:horizontalSpacing="10dp"
+        android:numColumns="3"
+        android:verticalSpacing="10dp" />
+
+    <TextView
+        android:id="@+id/done_id"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="24dp"
+        android:layout_marginRight="24dp"
+        android:background="@drawable/round_corners_green"
+        android:gravity="center"
+        android:shadowColor="@android:color/black"
+        android:shadowRadius="10"
+        android:text="Done"
+        android:textColor="@android:color/white" />
+
+</RelativeLayout>

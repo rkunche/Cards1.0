@@ -1,0 +1,10 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main_farment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <com.example.googlenowcard.CustomFrameLayout
+        android:id="@+id/content_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+    </FrameLayout>

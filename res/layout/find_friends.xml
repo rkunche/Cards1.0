@@ -1,0 +1,71 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+     android:background="@drawable/search_bg_shadow"
+    android:layout_height="300dp" >
+
+    <TextView
+        android:id="@+id/textview_id_one"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:gravity="left"
+        android:text="Interesting people &amp; pages"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/pager_find_price_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textview_id_one"
+        android:layout_marginLeft="12dp"
+        android:gravity="left"
+        android:text="Follow your favorites."
+        android:textColor="@android:color/black" />
+
+    <RelativeLayout
+        android:id="@+id/card_user_window_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pager_find_price_id"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/ic_action_create_aisle" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="T-Series"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dedicated to ent..."
+                android:textColor="@android:color/black" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/ic_action_create_aisle" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_alignParentBottom="true"
+            android:text="See more suggestions" />
+    </RelativeLayout>
+
+</RelativeLayout>

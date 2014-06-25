@@ -1,0 +1,67 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_bottom_id"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:layout_alignParentBottom="true" >
+
+    <ImageView
+        android:id="@+id/bookmark_id"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/bookmark" />
+
+    <TextView
+        android:id="@+id/bookmark_text_id"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="4dp"
+        android:layout_toRightOf="@+id/bookmark_id"
+        android:gravity="center_vertical"
+        android:text="5" >
+    </TextView>
+
+    <ImageView
+        android:id="@+id/share_image_id"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/new_share" />
+
+    <TextView
+        android:id="@+id/share_text_id"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="4dp"
+        android:layout_toRightOf="@+id/share_image_id"
+        android:gravity="center_vertical"
+        android:text="5" >
+    </TextView>
+
+    <ImageView
+        android:id="@+id/comment_image_id"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/comment_text_id"
+        android:src="@drawable/comment_dark" />
+
+    <TextView
+        android:id="@+id/comment_text_id"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="8dp"
+        android:gravity="center_vertical"
+        android:text="5" >
+    </TextView>
+
+</RelativeLayout>

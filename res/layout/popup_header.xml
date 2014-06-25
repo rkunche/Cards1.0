@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/overflow_listlayout_layout"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/feedback_editlay_height"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/edit_id"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/feedback_editlay_height" >
+
+        <TextView
+            android:id="@+id/text_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/send_feedback"
+            android:textSize="@dimen/feedback_text_size" />
+
+        <EditText
+            android:id="@+id/message_id"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="36dp"
+            android:gravity="bottom"
+            android:hint="@string/send_feedback"
+            android:textSize="@dimen/feedback_text_size" />
+
+        <ImageView
+            android:id="@+id/send_button"
+            android:layout_width="32dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="12dp"
+            android:src="@drawable/ic_action_send_now" />
+    </RelativeLayout>
+
+</LinearLayout>

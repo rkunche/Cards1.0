@@ -1,0 +1,24 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/search_bg_shadow" >
+   <RelativeLayout android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:orientation="vertical">
+  <ImageView android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:id="@+id/details_image_view"/>
+   <include
+       android:layout_below="@+id/details_image_view"
+       android:id="@+id/details_card_id"
+       android:visibility="gone"
+       layout="@layout/details_card_bottom" />
+      <ListView android:layout_width="match_parent"
+             android:layout_height="300dp"
+             android:visibility="gone"
+             android:layout_below="@+id/details_card_id"
+             android:id="@+id/comment_list_id"></ListView>
+   </RelativeLayout>
+
+</RelativeLayout>

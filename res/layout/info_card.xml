@@ -1,0 +1,86 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#bc5a1d" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/info_heading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="8dp"
+                android:gravity="center_vertical"
+                android:text="Personalize your aisle!"
+                android:textColor="@android:color/white"
+                android:textSize="22dp" />
+
+<!--             <ImageView
+                android:id="@+id/info_menu_id"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="4dp"
+                android:gravity="center_vertical"
+                android:src="@drawable/ic_action_overflow" /> -->
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" >
+
+            <TextView
+                android:id="@+id/info_one"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="16dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginRight="32dp"
+                android:gravity="center"
+                android:text="Add some pictures of yourself-\n pictures are a great way to show\n off your tastes!"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/info_heading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/info_one"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="32dp"
+                android:layout_marginRight="32dp"
+                android:layout_marginTop="16dp"
+                android:gravity="center"
+                android:text="The better other Vuers know your\n tastes, the better they can help!"
+                android:textColor="@android:color/white" />
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/info_add_aisle_button_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="48dp"
+            android:layout_marginTop="8dp"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:background="@drawable/button_round_shape"
+            android:gravity="center_vertical"
+            android:text="Add picture to personalize now"
+            android:textColor="@android:color/black" />
+    </RelativeLayout>
+
+</RelativeLayout>

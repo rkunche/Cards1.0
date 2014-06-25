@@ -1,0 +1,8 @@
+package com.example.googlenowcard;
+
+import com.aisles.datamodels.AisleWindowContent;
+
+public interface ActivityFragmentCommunicator {
+    public void onBrowserClickEvent(AisleWindowContent aisle);
+    public void onDoneButtonClickFromRationScreen();
+}

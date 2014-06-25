@@ -1,0 +1,109 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/header_user_info_id"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginLeft="12dp"
+        android:gravity="center_vertical"
+        android:hint="Personalize your shopping experience."
+        android:textColor="@android:color/holo_red_dark" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header_user_info_id"
+        android:layout_marginTop="-16dp"
+        android:visibility="gone"
+        android:id="@+id/user_details_card"
+       
+        android:background="@drawable/search_bg_shadow" >
+
+        <TextView
+            android:id="@+id/card_text_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="16dp"
+            android:text="Welcome to a whole new shopping experience," />
+ 
+            <com.example.googlenowcard.CustomAutoCompleteTextView
+        android:id="@+id/user_name_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/card_text_id"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="36dp"
+            android:layout_marginTop="17dp"
+            android:ems="8"
+            android:hint="New User"/>
+
+        <TextView
+            android:id="@+id/from_text_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/user_name_id"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="16dp"
+            android:text="from" />
+
+        <com.example.googlenowcard.CustomAutoCompleteTextView
+            android:id="@+id/user_city_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/from_text_id"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="36dp"
+            android:layout_marginTop="8dp"
+            android:ems="10"
+            android:hint="Enter City"
+            android:text="" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_below="@+id/user_city_id"
+            android:layout_marginBottom="16dp"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="8dp"
+                android:layout_weight="2"
+                android:background="@android:color/holo_red_light"
+                android:gravity="center"
+                android:text="Name and Location are accurate"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="4dp"
+                android:layout_weight="1"
+                android:background="#d3d3d3"
+                android:gravity="center"
+                android:text="Remind me later" />
+        </LinearLayout>
+    </RelativeLayout>
+ 
+ <RelativeLayout android:layout_width="match_parent"
+       android:layout_below="@+id/user_details_card"
+     android:layout_height="wrap_content">
+        
+
+    <include
+     
+        android:layout_alignParentBottom="true"
+        android:id="@+id/login_card"
+        layout="@layout/login_card" />
+    </RelativeLayout>
+</RelativeLayout>
