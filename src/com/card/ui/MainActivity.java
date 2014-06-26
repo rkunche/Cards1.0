@@ -33,7 +33,7 @@ import com.lateralthoughts.vue.notification.NotificationManager;
 import com.lateralthoughts.vue.notification.PopupFragment;
 import com.vue.logs.LogTags;
 import com.vue.logs.Logging;
-
+ 
 public class MainActivity extends Activity implements
         ActivityFragmentCommunicator {
     
