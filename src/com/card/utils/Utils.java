@@ -71,7 +71,7 @@ public class Utils {
 		// 24 notification bar
 		// 48 action bar
 		// 64 card heading info
-		// 48 card bottom info
+		// 888 card bottom info
 		// 48 card bottom text card_botoom_text_height
 		// 8 shading space.
 		if (maxCardHeight == 0) {
