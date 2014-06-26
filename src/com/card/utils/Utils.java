@@ -32,6 +32,7 @@ import com.card.ui.R;
  
 
 public class Utils {
+	
     static int maxCardHeight = 0;
     
     public static int randInt(int min, int max) {
