@@ -3,22 +3,30 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/search_bg_shadow" >
-   <RelativeLayout android:layout_width="match_parent"
-             android:layout_height="match_parent"
-             android:orientation="vertical">
-  <ImageView android:layout_width="match_parent"
-             android:layout_height="match_parent"
-             android:id="@+id/details_image_view"/>
-   <include
-       android:layout_below="@+id/details_image_view"
-       android:id="@+id/details_card_id"
-       android:visibility="gone"
-       layout="@layout/details_card_bottom" />
-      <ListView android:layout_width="match_parent"
-             android:layout_height="300dp"
-             android:visibility="gone"
-             android:layout_below="@+id/details_card_id"
-             android:id="@+id/comment_list_id"></ListView>
-   </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/details_image_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <include
+            android:id="@+id/details_card_id"
+            android:layout_below="@+id/details_image_view"
+            layout="@layout/details_card_bottom"
+            android:visibility="gone" />
+
+        <ListView
+            android:id="@+id/comment_list_id"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_below="@+id/details_card_id"
+            android:visibility="gone" >
+        </ListView>
+    </RelativeLayout>
 
 </RelativeLayout>

@@ -278,7 +278,9 @@ containing a value of this type.
         public static final int fb_butn_text=0x7f0a0006;
         public static final int google_butn_text=0x7f0a0007;
         public static final int hello_world=0x7f0a0002;
+        public static final int rate_now=0x7f0a0009;
         public static final int send_feedback=0x7f0a0005;
+        public static final int starts_in_twodays=0x7f0a0008;
         public static final int undo=0x7f0a0003;
         public static final int undoall=0x7f0a0004;
     }

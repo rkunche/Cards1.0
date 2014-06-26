@@ -57,7 +57,7 @@
         android:layout_marginLeft="12dp"
         android:layout_marginTop="-12dp"
         android:gravity="center_vertical"
-        android:text="starts in 2 days..." />
+        android:text="@string/starts_in_twodays" />
 
     <TextView
         android:id="@+id/bottom_view_id_ratenow"
@@ -68,7 +68,7 @@
         android:layout_toRightOf="@+id/bottom_view_id"
         android:background="@drawable/vue_button_selector"
         android:gravity="center_vertical"
-        android:text="Please rate now!"
+        android:text="@string/rate_now"
         android:textColor="@android:color/holo_orange_light" />
 
 </RelativeLayout>

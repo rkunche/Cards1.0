@@ -9,4 +9,6 @@
     <string name="send_feedback">Send Now</string>
     <string name="fb_butn_text">Personalize using Facebook</string>
      <string name="google_butn_text">Personalize using Google+</string>
+     <string name="starts_in_twodays">starts in 2 days...</string>
+     <string name="rate_now">Please rate now!</string>
 </resources>
