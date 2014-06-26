@@ -3,6 +3,7 @@ package com.aisles.datamodels;
 import java.util.ArrayList;
 
 public class Aisle {
+    
     public String mSuggesterName;
     public String mFindAtPrice;
     public String mAisleDescription;
