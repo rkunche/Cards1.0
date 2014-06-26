@@ -57,7 +57,9 @@ public class ImageLoader {
     }
     
     int stub_id = R.drawable.ic_launcher;
-    
+    /**
+     * use this imageDownloader temperarily later which we can replace with Volley.
+     */
     @TargetApi(Build.VERSION_CODES.HONEYCOMB)
     public void DisplayImage(String url, int loader, ImageView imageView,
             int height, int width) {

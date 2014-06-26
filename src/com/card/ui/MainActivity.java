@@ -74,6 +74,7 @@ public class MainActivity extends Activity implements
                     sAisleLimit, 0);
             task.execute();
         } else {
+            //do some thing when net work is not available.
             Toast.makeText(this, "Check your network settings",
                     Toast.LENGTH_SHORT).show();
         }
@@ -361,9 +362,9 @@ public class MainActivity extends Activity implements
      */
     @Override
     public void onBrowserClickEvent(AisleWindowContent aisle) {
-        showRatingFragment();
+        //showRatingFragment();
         // Toast.makeText(this, "click received", Toast.LENGTH_LONG).show();
-        // showDetailsFragment();
+          showDetailsFragment();
     }
     
     @Override

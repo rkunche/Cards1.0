@@ -113,7 +113,7 @@ public class CardWithFlipper extends DataAdapter {
         
         viewHolder.aisleWindowContent = mAisleWindowList.get(position);
         if (position == 2) {
-            // show the info card at this position
+            // show the info card at this position, this may chage later on.
             viewHolder.aisleWindowContent.setBestLargestHeightForWindow(Utils
                     .getMaxCardHeight(mContext));
             viewHolder.infLayout.setVisibility(View.VISIBLE);
@@ -299,6 +299,7 @@ public class CardWithFlipper extends DataAdapter {
         aisleImageDetails.mImageUrl = "No ImageUrl";
         aisleImageDetailsList.add(aisleImageDetails);
         AisleContext aisleContext = new AisleContext();
+        //temp aisle id.
         aisleContext.mAisleId = "123456789";
         aisleContext.mAisleOwnerImageURL = "";
         aisleContext.mDescription = "Your aisle has 20 likes";

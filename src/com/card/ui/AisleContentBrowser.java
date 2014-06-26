@@ -505,14 +505,7 @@ public class AisleContentBrowser extends ViewFlipper {
             AisleDetailSwipeListener swipListener) {
         mSwipeListener = swipListener;
     }
-    
-    public void setReferedObjectsNull() {
-        // To relese the refrence objects form the browser to avoid the memory
-        // leaks.
-        mSwipeListener = null;
-        mClickListener = null;
-        detailImgClickListenr = null;
-    }
+ 
     
     private AisleContentClickListener mClickListener;
     public AisleDetailSwipeListener mSwipeListener;
