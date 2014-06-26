@@ -16,7 +16,6 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.DisplayMetrics;
-import android.util.Log;
 import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -29,10 +28,11 @@ import android.widget.Toast;
 import com.aisles.datamodels.AisleWindowContent;
 import com.card.utils.AppConstants;
 import com.datafetcher.FetchTrendingDataTask;
-import com.card.ui.R;
 import com.lateralthoughts.vue.notification.NotificationAisle;
 import com.lateralthoughts.vue.notification.NotificationManager;
 import com.lateralthoughts.vue.notification.PopupFragment;
+import com.vue.logs.LogTags;
+import com.vue.logs.Logging;
 
 public class MainActivity extends Activity implements
         ActivityFragmentCommunicator {
@@ -54,6 +54,9 @@ public class MainActivity extends Activity implements
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_fragment);
+        boolean emergencyFlag = false;
+        //loggin the events
+        Logging.i(LogTags.LAUNCH_ACTIVITY,"Launcher Activity started", emergencyFlag);
         getActionBar().setHomeButtonEnabled(true);
         mCurrentInstance = this;
         // inflate the card fragment into main screen

@@ -19,7 +19,7 @@ import com.aisles.datamodels.AisleWindowContent;
 import com.aisles.datamodels.ImageComment;
 import com.aisles.datamodels.ImageRating;
 import com.aisles.datamodels.UrlConstants;
-import com.aisles.datamodels.VueConstants;
+import com.card.utils.AppConstants;
 
 public class Parser {
     // ========================= START OF PARSING TAGS
@@ -68,27 +68,27 @@ public class Parser {
         // get the image data from image object
         AisleImageDetails aisleImageDetails = new AisleImageDetails();
         aisleImageDetails.mId = jsonObject
-                .getString(VueConstants.AISLE_IMAGE_ID);
+                .getString(AppConstants.AISLE_IMAGE_ID);
         aisleImageDetails.mTitle = jsonObject
-                .getString(VueConstants.AISLE_IMAGE_TITLE);
+                .getString(AppConstants.AISLE_IMAGE_TITLE);
         aisleImageDetails.mAvailableHeight = jsonObject
-                .getInt(VueConstants.AISLE_IMAGE_HEIGHT);
+                .getInt(AppConstants.AISLE_IMAGE_HEIGHT);
         aisleImageDetails.mStore = jsonObject
-                .getString(VueConstants.AISLE_IMAGE_STORE);
+                .getString(AppConstants.AISLE_IMAGE_STORE);
         aisleImageDetails.mImageUrl = jsonObject
-                .getString(VueConstants.AISLE_IMAGE_IMAGE_URL);
+                .getString(AppConstants.AISLE_IMAGE_IMAGE_URL);
         Log.i("ImageUrl", "ImageUrl: " + aisleImageDetails.mImageUrl);
         aisleImageDetails.mAvailableWidth = jsonObject
-                .getInt(VueConstants.AISLE_IMAGE_WIDTH);
+                .getInt(AppConstants.AISLE_IMAGE_WIDTH);
         aisleImageDetails.mDetailsUrl = jsonObject
-                .getString(VueConstants.AISLE_IMAGE_DETAILS_URL);
+                .getString(AppConstants.AISLE_IMAGE_DETAILS_URL);
         aisleImageDetails.mOwnerUserId = jsonObject
-                .getString(VueConstants.AISLE_IMAGE_OWNERUSER_ID);
+                .getString(AppConstants.AISLE_IMAGE_OWNERUSER_ID);
         aisleImageDetails.mOwnerAisleId = jsonObject
-                .getString(VueConstants.AISLE_IMAGE_OWNER_AISLE_ID);
+                .getString(AppConstants.AISLE_IMAGE_OWNER_AISLE_ID);
         // get the image rating list
         JSONArray ratingJsonArray = jsonObject
-                .getJSONArray(VueConstants.AISLE_IMAGE_RATINGS);
+                .getJSONArray(AppConstants.AISLE_IMAGE_RATINGS);
         ArrayList<ImageRating> ratingList = new ArrayList<ImageRating>();
         int ratingLikeCount = 0;
         if (ratingJsonArray != null) {
@@ -97,19 +97,19 @@ public class Parser {
                 JSONObject ratingObj = ratingJsonArray.getJSONObject(i);
                 imgRatings = new ImageRating();
                 imgRatings.mId = ratingObj
-                        .getLong(VueConstants.AISLE_IMAGE_RATING_ID);
+                        .getLong(AppConstants.AISLE_IMAGE_RATING_ID);
                 imgRatings.mLastModifiedTimestamp = ratingObj
-                        .getLong(VueConstants.AISLE_IMAGE_RATING_LASTMODIFIED_TIME);
+                        .getLong(AppConstants.AISLE_IMAGE_RATING_LASTMODIFIED_TIME);
                 imgRatings.mImageRatingOwnerFirstName = ratingObj
-                        .getString(VueConstants.AISLE_IMAGE_RATING_OWNER_FIRST_NAME);
+                        .getString(AppConstants.AISLE_IMAGE_RATING_OWNER_FIRST_NAME);
                 imgRatings.mImageId = ratingObj
-                        .getLong(VueConstants.AISLE_IMAGE_RATING_IMAGEID);
+                        .getLong(AppConstants.AISLE_IMAGE_RATING_IMAGEID);
                 imgRatings.mImageRatingOwnerLastName = ratingObj
-                        .getString(VueConstants.AISLE_IMAGE_RATING_OWNER_LAST_NAME);
+                        .getString(AppConstants.AISLE_IMAGE_RATING_OWNER_LAST_NAME);
                 imgRatings.mAisleId = ratingObj
-                        .getLong(VueConstants.AISLE_IMAGE_RATING_AISLEID);
+                        .getLong(AppConstants.AISLE_IMAGE_RATING_AISLEID);
                 imgRatings.mLiked = ratingObj
-                        .getBoolean(VueConstants.AISLE_IMAGE_RATING_LIKED);
+                        .getBoolean(AppConstants.AISLE_IMAGE_RATING_LIKED);
                 if (imgRatings.mLiked) {
                     ratingLikeCount++;
                 }
@@ -121,7 +121,7 @@ public class Parser {
         
         // get the image comment data.
         JSONArray jsonArray = jsonObject
-                .getJSONArray(VueConstants.AISLE_IMAGE_COMMENTS);
+                .getJSONArray(AppConstants.AISLE_IMAGE_COMMENTS);
         ArrayList<ImageComments> commentList = new ArrayList<ImageComments>();
         if (jsonArray != null) {
             ImageComments imgComments;
@@ -129,30 +129,30 @@ public class Parser {
                 JSONObject commnetObj = jsonArray.getJSONObject(i);
                 imgComments = new ImageComments();
                 imgComments.mId = commnetObj
-                        .getLong(VueConstants.AISLE_IMAGE_COMMENTS_ID);
+                        .getLong(AppConstants.AISLE_IMAGE_COMMENTS_ID);
                 if (commnetObj.getString(
-                        VueConstants.AISLE_IMAGE_COMMENTS_LASTMODIFIED_TIME)
+                        AppConstants.AISLE_IMAGE_COMMENTS_LASTMODIFIED_TIME)
                         .equals("null")) {
                     imgComments.mLastModifiedTimestamp = commnetObj
-                            .getLong(VueConstants.AISLE_IMAGE_COMMENTS_CREATED_TIME);
+                            .getLong(AppConstants.AISLE_IMAGE_COMMENTS_CREATED_TIME);
                 } else {
                     imgComments.mLastModifiedTimestamp = commnetObj
-                            .getLong(VueConstants.AISLE_IMAGE_COMMENTS_LASTMODIFIED_TIME);
+                            .getLong(AppConstants.AISLE_IMAGE_COMMENTS_LASTMODIFIED_TIME);
                 }
                 imgComments.mCommenterLastName = commnetObj
-                        .getString(VueConstants.AISLE_IMAGE_COMMENTER_LAST_NAME);
+                        .getString(AppConstants.AISLE_IMAGE_COMMENTER_LAST_NAME);
                 imgComments.mCommenterUrl = commnetObj
-                        .getString(VueConstants.IMAGE_COMMENT_OWNER_IMAGE_URL);
+                        .getString(AppConstants.IMAGE_COMMENT_OWNER_IMAGE_URL);
                 imgComments.mImageId = commnetObj
-                        .getLong(VueConstants.AISLE_IMAGE_COMMENTS_IMAGEID);
+                        .getLong(AppConstants.AISLE_IMAGE_COMMENTS_IMAGEID);
                 
                 imgComments.mCommenterFirstName = commnetObj
-                        .getString(VueConstants.AISLE_IMAGE_COMMENTER_FIRST_NAME);
+                        .getString(AppConstants.AISLE_IMAGE_COMMENTER_FIRST_NAME);
                 imgComments.mOwnerUserId = commnetObj
-                        .getString(VueConstants.AISLE_IMAGE_COMMENTS_USERID);
+                        .getString(AppConstants.AISLE_IMAGE_COMMENTS_USERID);
                 
                 imgComments.mComment = commnetObj
-                        .getString(VueConstants.COMMENT);
+                        .getString(AppConstants.COMMENT);
                 commentList.add(imgComments);
             }
         }
@@ -223,9 +223,9 @@ public class Parser {
             ArrayList<AisleImageDetails> aisleImageDetailsList = new ArrayList<AisleImageDetails>();
             try {
                 JSONObject imageObject = ailseItem
-                        .getJSONObject(VueConstants.AISLE_IMAGE_OBJECT);
+                        .getJSONObject(AppConstants.AISLE_IMAGE_OBJECT);
                 JSONArray ImageListJson = imageObject
-                        .getJSONArray(VueConstants.AISLE_IMAGE_LIST);
+                        .getJSONArray(AppConstants.AISLE_IMAGE_LIST);
                 for (int index = 0; index < ImageListJson.length(); index++) {
                     AisleImageDetails aisleImageDetails = parseAisleImageData(ImageListJson
                             .getJSONObject(index));
@@ -259,41 +259,41 @@ public class Parser {
     public AisleContext parseAisleData(JSONObject josnObject) {
         AisleContext aisleContext = new AisleContext();
         try {
-            aisleContext.mAisleId = josnObject.getString(VueConstants.AISLE_ID);
+            aisleContext.mAisleId = josnObject.getString(AppConstants.AISLE_ID);
             String aisleOwnerImageUrl = josnObject
-                    .optString(VueConstants.AISLE_OWNER_IMAGE_URL);
+                    .optString(AppConstants.AISLE_OWNER_IMAGE_URL);
             if (aisleOwnerImageUrl == null || aisleOwnerImageUrl.equals("null")) {
                 aisleContext.mAisleOwnerImageURL = null;
             } else {
                 aisleContext.mAisleOwnerImageURL = aisleOwnerImageUrl;
             }
             String lastName = josnObject
-                    .getString(VueConstants.AISLE_OWNER_LASTNAME);
+                    .getString(AppConstants.AISLE_OWNER_LASTNAME);
             aisleContext.mCategory = josnObject
-                    .getString(VueConstants.AISLE_CATEGORY);
+                    .getString(AppConstants.AISLE_CATEGORY);
             aisleContext.mBookmarkCount = josnObject
-                    .getInt(VueConstants.AISLE_BOOKMARK_COUNT);
+                    .getInt(AppConstants.AISLE_BOOKMARK_COUNT);
             String description = josnObject
-                    .getString(VueConstants.AISLE_DESCRIPTION);
+                    .getString(AppConstants.AISLE_DESCRIPTION);
             if (description == null || description.equals("null")) {
                 aisleContext.mDescription = "";
             } else {
                 aisleContext.mDescription = description;
             }
             String occasion = josnObject
-                    .getString(VueConstants.AISLE_OCCASSION);
+                    .getString(AppConstants.AISLE_OCCASSION);
             if (occasion == null || occasion.equals("null")) {
                 aisleContext.mOccasion = "";
             } else {
                 aisleContext.mOccasion = occasion;
             }
-            aisleContext.mName = josnObject.getString(VueConstants.AISLE_NAME);
+            aisleContext.mName = josnObject.getString(AppConstants.AISLE_NAME);
             String firstName = josnObject
-                    .getString(VueConstants.AISLE_OWNER_FIRSTNAME);
+                    .getString(AppConstants.AISLE_OWNER_FIRSTNAME);
             aisleContext.mUserId = josnObject
-                    .getString(VueConstants.AISLE_OWNER_USER_ID);
+                    .getString(AppConstants.AISLE_OWNER_USER_ID);
             aisleContext.mLookingForItem = josnObject
-                    .getString(VueConstants.AISLE_LOOKINGFOR);
+                    .getString(AppConstants.AISLE_LOOKINGFOR);
             
             if (firstName == null || firstName.equals("null")) {
                 aisleContext.mFirstName = " ";
@@ -326,24 +326,24 @@ public class Parser {
                 for (int i = 0; i < jsonArray.length(); i++) {
                     imgRating = new ImageRating();
                     imgRating.mId = jsonArray.getJSONObject(i).getLong(
-                            VueConstants.AISLE_IMAGE_RATING_ID);
+                            AppConstants.AISLE_IMAGE_RATING_ID);
                     imgRating.mImageId = jsonArray.getJSONObject(i).getLong(
-                            VueConstants.AISLE_IMAGE_RATING_IMAGEID);
+                            AppConstants.AISLE_IMAGE_RATING_IMAGEID);
                     imgRating.mAisleId = jsonArray.getJSONObject(i).getLong(
-                            VueConstants.AISLE_IMAGE_RATING_AISLEID);
+                            AppConstants.AISLE_IMAGE_RATING_AISLEID);
                     imgRating.mLastModifiedTimestamp = jsonArray.getJSONObject(
                             i).getLong(
-                            VueConstants.AISLE_IMAGE_RATING_LASTMODIFIED_TIME);
+                            AppConstants.AISLE_IMAGE_RATING_LASTMODIFIED_TIME);
                     imgRating.mImageRatingOwnerFirstName = jsonArray
                             .getJSONObject(i)
                             .getString(
-                                    VueConstants.AISLE_IMAGE_RATING_OWNER_FIRST_NAME);
+                                    AppConstants.AISLE_IMAGE_RATING_OWNER_FIRST_NAME);
                     imgRating.mImageRatingOwnerLastName = jsonArray
                             .getJSONObject(i)
                             .getString(
-                                    VueConstants.AISLE_IMAGE_RATING_OWNER_LAST_NAME);
+                                    AppConstants.AISLE_IMAGE_RATING_OWNER_LAST_NAME);
                     imgRating.mLiked = jsonArray.getJSONObject(i).getBoolean(
-                            VueConstants.AISLE_IMAGE_RATING_LIKED);
+                            AppConstants.AISLE_IMAGE_RATING_LIKED);
                     imgRatingList.add(imgRating);
                 }
                 imgRatingList = removeDuplicateImageRating(imgRatingList);
@@ -394,32 +394,32 @@ public class Parser {
                 JSONObject commnetObj = new JSONObject(response);
                 ImageComment imgComments = new ImageComment();
                 imgComments.setId(commnetObj
-                        .getLong(VueConstants.AISLE_IMAGE_COMMENTS_ID));
+                        .getLong(AppConstants.AISLE_IMAGE_COMMENTS_ID));
                 if (commnetObj.getString(
-                        VueConstants.AISLE_IMAGE_COMMENTS_LASTMODIFIED_TIME)
+                        AppConstants.AISLE_IMAGE_COMMENTS_LASTMODIFIED_TIME)
                         .equals("null")) {
                     imgComments
                             .setCreatedTimestamp(commnetObj
-                                    .getLong(VueConstants.AISLE_IMAGE_COMMENTS_CREATED_TIME));
+                                    .getLong(AppConstants.AISLE_IMAGE_COMMENTS_CREATED_TIME));
                 } else {
                     imgComments
                             .setLastModifiedTimestamp(commnetObj
-                                    .getLong(VueConstants.AISLE_IMAGE_COMMENTS_LASTMODIFIED_TIME));
+                                    .getLong(AppConstants.AISLE_IMAGE_COMMENTS_LASTMODIFIED_TIME));
                 }
                 imgComments
                         .setCommenterLastName(commnetObj
-                                .getString(VueConstants.AISLE_IMAGE_COMMENTER_LAST_NAME));
+                                .getString(AppConstants.AISLE_IMAGE_COMMENTER_LAST_NAME));
                 imgComments.setImageCommentOwnerImageURL(commnetObj
-                        .getString(VueConstants.IMAGE_COMMENT_OWNER_IMAGE_URL));
+                        .getString(AppConstants.IMAGE_COMMENT_OWNER_IMAGE_URL));
                 imgComments.setOwnerImageId(commnetObj
-                        .getLong(VueConstants.AISLE_IMAGE_COMMENTS_IMAGEID));
+                        .getLong(AppConstants.AISLE_IMAGE_COMMENTS_IMAGEID));
                 imgComments
                         .setCommenterFirstName(commnetObj
-                                .getString(VueConstants.AISLE_IMAGE_COMMENTER_FIRST_NAME));
+                                .getString(AppConstants.AISLE_IMAGE_COMMENTER_FIRST_NAME));
                 imgComments.setOwnerUserId(Long.valueOf(commnetObj
-                        .getString(VueConstants.AISLE_IMAGE_COMMENTS_USERID)));
+                        .getString(AppConstants.AISLE_IMAGE_COMMENTS_USERID)));
                 imgComments.setComment(commnetObj
-                        .getString(VueConstants.COMMENT));
+                        .getString(AppConstants.COMMENT));
                 return imgComments;
             }
             return null;

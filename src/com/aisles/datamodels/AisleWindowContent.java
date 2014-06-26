@@ -29,7 +29,6 @@ public class AisleWindowContent {
     private Random randomNumGenerator = new Random();
     private static final String AISLE_STAGE_FOUR = "completed";
     public int mTotalLikesCount;
-    public String mAisleCureentStage = VueConstants.AISLE_STATGE_ONE;
     private boolean mShareIndicator = false;
     
     public int mTagId;
