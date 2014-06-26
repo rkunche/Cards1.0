@@ -67,29 +67,29 @@ public class Utils {
         
     }
     
-    public static int getMaxCardHeight(Context context) {
-        // 24 notification bar
-        // 48 action bar
-        // 64 card heading info
-        // 72 card bottom info
-        // 48 card bottom text card_botoom_text_height
-        // 8 shading space.
-        if (maxCardHeight == 0) {
-            int cardHeadingInfo = (int) context.getResources().getInteger(
-                    R.integer.top_card_height);
-            int cardBottomInfo = (int) context.getResources().getInteger(
-                    R.integer.image_card_botoom_layout_height);
-            int cardBottomText = (int) context.getResources().getInteger(
-                    R.integer.card_botoom_text_height);
-            ScreenDimensions dimensions = getScreenDimensions(context);
-            
-            int deductValue = Utils.getPixel(context, (24 + 48
-                    + cardHeadingInfo + cardBottomInfo + cardBottomText + 8));
-            maxCardHeight = dimensions.mScreenHeight - deductValue;
-        }
-        return maxCardHeight;
-        
-    }
+	public static int getMaxCardHeight(Context context) {
+		// 24 notification bar
+		// 48 action bar
+		// 64 card heading info
+		// 48 card bottom info
+		// 48 card bottom text card_botoom_text_height
+		// 8 shading space.
+		if (maxCardHeight == 0) {
+			int cardHeadingInfo = (int) context.getResources().getInteger(
+					R.integer.top_card_height);
+			int cardBottomInfo = (int) context.getResources().getInteger(
+					R.integer.image_card_botoom_layout_height);
+			int cardBottomText = (int) context.getResources().getInteger(
+					R.integer.card_botoom_text_height);
+			ScreenDimensions dimensions = getScreenDimensions(context);
+
+			int deductValue = Utils.getPixel(context, (24 + 48
+					+ cardHeadingInfo + cardBottomInfo + cardBottomText + 8));
+			maxCardHeight = dimensions.mScreenHeight - deductValue;
+		}
+		return maxCardHeight;
+
+	}
     
     public static int getCurrentCardHeight(int currentCardHeight,
             Context context) {
@@ -100,9 +100,7 @@ public class Utils {
         } else {
             currentCardFinalHeight = currentCardHeight;
         }
-        
         return currentCardFinalHeight;
-        
     }
     
     public static Bitmap getRoundedCornerBitmap(Bitmap bitmap,
